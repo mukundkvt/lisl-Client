@@ -1,0 +1,1086 @@
+.MainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: clamp(20px, 5vw, 50px);
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #fff5f5, #fff);
+}
+
+.MainWrapper {
+  border: 1px solid #ffaeae;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 10px 25px rgba(129, 126, 126, 0.1);
+  width: 90%;
+  max-width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.topDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 12px;
+}
+
+.topText {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #363636;
+  margin-top: 5px;
+}
+
+.topClockDiv {
+  display: flex;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.clockIcon {
+  height: 20px;
+  width: 20px;
+  align-self: center;
+}
+
+.clockText {
+  font-size: 14px;
+  color: #817e7e;
+}
+
+.PageText {
+  font-family: "CircularXXWeb-Medium";
+  font-size: 16px;
+  color: #040404cc;
+  text-align: center;
+}
+
+.shieldDiv {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.shieldText {
+  font-size: 14px;
+  color: #404040bf;
+  margin-left: 5px;
+}
+
+.Line {
+  border-bottom: 1px solid #e4e4e4;
+  margin-top: 50px;
+}
+
+.verifyButton {
+  background-image: linear-gradient(45deg, #f73439, #f8777b) !important;
+  font-size: clamp(14px, 1.2vw, 16px);
+  font-weight: 500;
+  color: #fff;
+  border-radius: 12px !important;
+  border: none;
+  cursor: pointer;
+  padding: 12px 40px;
+  margin: 20px auto;
+  margin-left: 50%;
+  transform: translate(-50%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(247, 52, 57, 0.2);
+}
+
+.verifyButton:hover {
+  transform: translate(-50%, -2px);
+  box-shadow: 0 6px 20px rgba(247, 52, 57, 0.3);
+}
+
+.FormContainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(15px, 3vw, 30px);
+  box-sizing: border-box;
+}
+
+.FormText {
+  font-family: "CircularXXWeb-Medium";
+  font-size: 16px;
+  color: #040404cc;
+  font-weight: 500;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mandatoryAsterisk {
+  color: #f73439;
+  font-size: 16px;
+}
+
+.errorText {
+  color: #f73439;
+  font-size: 12px;
+  margin-top: 4px;
+  padding: 8px 0;
+  margin-bottom: 8px;
+}
+
+.inputLabelGroup {
+  border: 1px solid transparent;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.inputLabelGroup.hasError {
+  border-color: #f73439;
+}
+
+.inputError {
+  border-color: #f73439 !important;
+}
+
+.inputError:focus {
+  border-color: #f73439 !important;
+  box-shadow: 0 0 0 3px rgba(247, 52, 57, 0.1) !important;
+}
+
+/* Removed duplicate dropdown styles */
+
+.nomineeSection {
+  margin-bottom: 30px;
+}
+
+.nomineeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.nomineeCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.nomineeCardHeader {
+  background-color: #f5f5f5;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nomineeCardHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.nomineeCardBody {
+  padding: 15px;
+}
+
+.nomineeRow {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.nomineeField {
+  flex: 1;
+  min-width: 200px;
+}
+
+.nomineeField label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.nomineeInput,
+.nomineeSelect {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.nomineeSelect {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+.dobGroup {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.dobInput {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  max-width: 80px;
+}
+
+.shareField {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shareSlider {
+  flex: 1;
+  -webkit-appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: #ddd;
+  outline: none;
+}
+
+.shareSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f75054;
+  cursor: pointer;
+}
+
+.shareSlider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f75054;
+  cursor: pointer;
+}
+
+.shareValue {
+  min-width: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: #f75054;
+  font-size: 14px;
+}
+
+.guardianSection {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 2px solid #ffd966;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fffdf5 0%, #fff7db 100%);
+
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.guardianSectionTitle {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f73439;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.guardianSectionTitle::before {
+  content: "👤";
+  font-size: 18px;
+}
+
+/* Nominee Tabs Styles */
+.nomineeTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  overflow-x: auto;
+  padding: 0 0 8px 0;
+}
+
+.nomineeTab {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+.nomineeTab:hover {
+  color: #f73439;
+  background-color: #f9f9f9;
+  border-radius: 6px 6px 0 0;
+}
+
+.nomineeTab.active {
+  color: #f73439;
+  border-bottom: 3px solid #f73439;
+}
+
+.nomineeTabContent {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .nomineeRow {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nomineeField {
+    width: 100% !important;
+  }
+
+  .nomineeHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nomineeHeader .customDropdown {
+    width: 100%;
+  }
+
+  .nomineeHeader .FormText {
+    text-align: left;
+  }
+
+  .dobGroup {
+    width: 100%;
+  }
+
+  .dobInput {
+    max-width: none;
+  }
+}
+
+.mandatorySection {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.MandatoryHeading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.mandatoryCard {
+  border: 1px solid #ffaeae;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.MandatoryContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ffaeae;
+}
+
+.MandatoryContainer:last-child {
+  border-bottom: none;
+}
+
+.MandatoryText {
+  font-size: 14px;
+  color: #040404cc;
+  font-family: "CircularXXWeb-Medium";
+}
+
+.MandatoryTick {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f73439;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.MandatoryTick::after {
+  content: "";
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+.nomineeCount {
+  margin: 20px 0;
+}
+
+.nomineeCount select {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.nomineeDetails {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border: 1px solid #e0e0e0;
+}
+
+.nomineeDetails h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.nomineeDetails input,
+.nomineeDetails select {
+  width: 100%;
+  /* padding: 10px; */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 5px 0;
+  transition: border-color 0.2s;
+}
+
+.nomineeDetails input:focus,
+.nomineeDetails select:focus {
+  border-color: #f73439;
+  outline: none;
+}
+
+.guardianDetails {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.guardianDetails h4 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.rowFields {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.fieldColumn {
+  flex: 1;
+}
+
+.shareContainer {
+  margin: 20px 0;
+}
+
+.sliderContainer {
+  position: relative;
+  padding: 10px 0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: calc(100% - 20px);
+  height: 8px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  margin: 10px;
+  padding: 6px 0;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f73439;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+  border: 2px solid white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #f73439;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.sliderValue {
+  position: absolute;
+  right: 10px;
+  top: -25px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  width: 40px;
+  text-align: right;
+}
+
+.dobContainer {
+  margin: 15px 0;
+}
+
+.dobInputs {
+  display: flex;
+  gap: 10px;
+}
+
+.dobInputs input {
+  width: 60px;
+  /* padding: 8px; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.dobInputs input:last-child {
+  width: 80px;
+}
+
+.nomineeDetails {
+  margin: 20px 0;
+  padding: clamp(15px, 3vw, 25px);
+  border: 1px solid #ffaeae;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nomineeDetails:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nomineeDetails label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.nomineeDetails input[type="text"],
+.nomineeDetails input[type="number"],
+.nomineeDetails select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.nomineeDetails select {
+  appearance: none; /* Remove default arrow */
+  background: url("data:image/png;base64,...") no-repeat right; /* Add a dropdown arrow icon here */
+  background-size: 12px;
+}
+
+.nomineeDetailsInput {
+  padding: 12px 16px;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 42px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  background-color: #fafafa;
+}
+
+.nomineeDetailsInput:focus {
+  outline: none;
+  border-color: #f73439;
+}
+
+.nomineeDetailsInput::placeholder {
+  color: #757575;
+}
+
+.nomineeDetailsInput:focus {
+  border-color: #f73439;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(247, 52, 57, 0.1);
+  background-color: #fff;
+}
+
+.networthFields {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.networthFields > input:first-child {
+  flex: 1;
+  min-width: 150px;
+}
+
+.dateFields {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+.dateFields input {
+  width: 100%;
+  text-align: center;
+  min-width: 80px;
+}
+
+.motherNameSection {
+  margin-top: 10px;
+}
+
+.motherNameFields {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.motherNameFields input {
+  flex: 1;
+}
+
+.dropdownSection {
+  margin: 15px 0;
+}
+
+.dropdownRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.dropdownRow .FormText {
+  margin: 0;
+  flex: 1;
+}
+
+.customDropdown {
+  width: 200px;
+  padding: 8px 35px 8px 15px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  color: #404040bf;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23404040' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+.customDropdown:focus {
+  outline: none;
+  border-color: #f73439;
+}
+
+.customDropdown option {
+  padding: 8px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.closeButton {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f73439;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  background: #f8777b;
+}
+
+.saveButton {
+  background: #f73439 !important;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.saveButton:hover {
+  background: #f8777b !important;
+}
+
+.modalContent {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modalContent h2 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.modalContent p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.modalContent button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.modalContent button:hover {
+  background: #0056b3;
+}
+
+.modalContent input,
+.modalContent select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 5px 0 15px 0;
+}
+
+.modalContent label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 500;
+}
+
+.networthSection {
+  margin-top: 20px;
+}
+
+.hideNumberSpinner {
+  /* Hide number input spinners for Webkit browsers */
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hideNumberSpinner::-webkit-inner-spin-button,
+.hideNumberSpinner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide number input spinners for Firefox */
+.hideNumberSpinner[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 1024px) {
+  .MainWrapper {
+    width: 95%;
+  }
+
+  .FormContainer {
+    width: 95%;
+  }
+
+  .topText {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .motherNameFields {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .MainContainer {
+    padding: 15px;
+  }
+
+  .topText {
+    font-size: 16px;
+  }
+
+  .clockText {
+    font-size: 12px;
+  }
+
+  .parentRow {
+    flex-direction: column;
+  }
+
+  .parentField {
+    width: 100%;
+  }
+
+  .motherNameFields {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  .motherNameFields input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nomineeDetails {
+    padding: 15px;
+  }
+
+  .rowFields {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dobInputs {
+    justify-content: space-between;
+  }
+
+  .dobInputs input {
+    width: 28%;
+  }
+
+  .networthFields {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .networthFields > input:first-child {
+    width: 100% !important;
+    flex: none;
+  }
+
+  .dateFields {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+
+  .dateFields input,
+  .dateFields .nomineeDetailsInput {
+    width: auto !important;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .dropdownRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .customDropdown {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .MainContainer {
+    padding: 10px;
+  }
+
+  .MainWrapper {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .FormContainer {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .verifyButton {
+    width: 90%;
+    padding: 10px 20px;
+  }
+
+  .nomineeDetailsInput {
+    height: 38px;
+    padding: 8px 12px;
+  }
+}
+
+.dobLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.minorBadge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #fff4e5;
+  color: #b45309;
+  border: 1px solid #facc15;
+  white-space: nowrap;
+  margin-left: 5px;
+}
+
+.addressLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.addressMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.addressCheckbox {
+  width: 12px;
+  height: 12px;
+  /* cursor: not-allowed; */
+}
+
+.addressCheckboxText {
+  font-size: 11px;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.parentRow {
+  display: flex;
+  gap: 16px;
+}
+
+.parentField {
+  flex: 1;
+}
+
+.parentField input {
+  width: 100%;
+}

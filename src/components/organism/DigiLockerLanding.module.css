@@ -1,0 +1,493 @@
+.MainContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.MainWrapper{
+    border: 1px solid #ffaeae;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px 3px #817e7e1a;
+    width: 90%;
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.topPANDiv{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 12px;
+}
+
+.topPanText{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #363636;
+    margin-top: 5px;
+    display: flex;
+}
+
+.topClockDiv{
+    display: flex;
+    gap: 5px;
+    margin-top: 7px;
+}
+
+.clockIcon{
+    height: 20px;
+    width: 20px;
+    align-self: center;
+}
+
+.clockText{
+    font-size: 14px;
+    color: #817E7E;
+}
+
+.tabsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #817E7E;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.activeTab {
+    color: #f73439;
+    font-weight: 500;
+}
+
+.activeTab::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f73439;
+}
+
+.tabContent {
+    padding: 20px 0;
+}
+
+.panDemoDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.EnterYourPan{
+    font-family: 'CircularXXWeb-Medium';
+    font-size: 16px;
+    color: #040404CC;
+}
+
+.panImage{
+    margin-top: 40px;
+}
+
+.SamplePANText{
+    font-size: 12px;
+    color: #817E7E;
+    font-weight: 500;
+}
+
+.ListDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
+    margin-top: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ListItem{
+    align-items: center;
+    margin-bottom: 10px;
+    color: #4F4F4F;
+    font-size: 12px;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+.ListItem::marker {
+    color: #ea9324;
+    font-size: 1.2em;
+}
+
+.consentDiv{
+    width: 70%;
+    align-self: center;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #817E7E;
+    line-height: 1.4;
+    padding: 15px;
+}
+
+.shieldDiv{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.shieldText{
+    font-size: 14px;
+    color: #404040BF;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.Line{
+    border-bottom: 1px solid #e4e4e4;
+    margin-top: 50px;
+}
+
+.verifyButton{
+    background-image: linear-gradient(to top, #f73439, #f8777b) !important;
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    color: #fff;
+    border-radius: 8px !important;
+    border: none;
+    cursor: pointer;
+    padding: 8px 30px;
+    margin: 10px auto;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.addressFormContainer {
+    width: 100%;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.addressHeading {
+    font-size: 16px;
+    color: #363636;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.formLabel {
+    display: block;
+    font-size: 12px;
+    color: #040404CC;
+    margin-bottom: 5px;
+}
+
+.formInput {
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.formInput:focus {
+    border-color: #f73439;
+}
+
+.formRow {
+    display: flex;
+    gap: 15px;
+}
+
+.formRow .formGroup {
+    flex: 1;
+}
+
+.uploadButton {
+    background-color: #f73439;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.uploadButton:hover {
+    background-color: #e41e23;
+}
+
+.documentUploadContainer {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.uploadSection {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.previewContainer {
+    flex: 1;
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px dashed #e4e4e4;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.previewContainer:hover {
+    border-color: #f73439;
+    box-shadow: 0 2px 8px rgba(247, 52, 57, 0.1);
+}
+
+.previewImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.uploadNote {
+    font-size: 12px;
+    color: #817E7E;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.errorText {
+    color: #f73439;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.uploadButton:active {
+    background-color: #f0f0f0;
+}
+
+.uploadNote {
+    font-size: 12px;
+    color: #817E7E;
+    margin-top: 5px;
+}
+
+.errorText {
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 10px;
+    background-color: #f73439;
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 4px rgba(247, 52, 57, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.confirmationDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2
+}
+
+.confirmationWrapper{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.confirmationItemDiv{
+    width: 80%;
+}
+
+.loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2
+}
+
+.loaderDiv{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.fetchingText{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #040404CC;
+    font-family: 'CircularXXWeb-Medium';
+}
+
+.loadingText{
+    color: #e78a00;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .MainContainer {
+        padding: 15px;
+    }
+
+    .topPanText {
+        font-size: 16px;
+    }
+
+    .clockText {
+        font-size: 12px;
+    }
+
+    .tab {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .EnterYourPan {
+        font-size: 14px;
+        margin-bottom: 40px;
+        text-align: center;
+        padding: 0 5px;
+    }
+
+    .ListDiv {
+        padding: 0 5%;
+        margin-top: 30px;
+    }
+
+    .consentDiv {
+        width: 100%;
+        font-size: 11px;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .verifyButton {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .shieldDiv {
+        padding: 0 15px;
+        margin-top: 30px;
+    }
+
+    .shieldText {
+        font-size: 13px;
+    }
+
+    .panImage {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin-left: -15px;
+        margin-top: 0;
+    }
+
+    .uploadSection {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .formRow {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.errorBanner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fef2f2;
+    border: 1.5px solid #f87171;
+    color: #dc2626;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin: 15px 0 5px 0;
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
+}

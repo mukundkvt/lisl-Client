@@ -1,0 +1,176 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.checkmarkContainer {
+  width: 120px;
+  height: 120px;
+  background-color: #fff5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: 1px solid #ffaeae;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.checkmark {
+  width: 60px;
+  height: 60px;
+  color: #f73439;
+  animation: checkmarkAnimation 2s ease-in-out infinite;
+}
+
+.checkmarkCircle {
+  stroke: #f73439;
+  stroke-width: 2;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards, pulse 2s ease-in-out infinite;
+  animation-delay: 0.2s, 1s;
+}
+
+.checkmarkCheck {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) forwards, pulse 2s ease-in-out infinite;
+  animation-delay: 0.8s, 1.2s;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes checkmarkAnimation {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.message {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.logoutButton {
+  background-image: linear-gradient(45deg, #f73439, #f8777b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(247, 52, 57, 0.2);
+}
+
+.logoutButton:hover {
+  background-image: linear-gradient(45deg, #e62d32, #f66569);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(247, 52, 57, 0.3);
+}
+
+.logoutButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(247, 52, 57, 0.2);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 2rem;
+  }
+  
+  .checkmarkContainer {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .checkmark {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .checkmarkContainer {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .checkmark {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .message {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,446 @@
+.MainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: clamp(20px, 5vw, 50px);
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #fff5f5, #fff);
+    position: relative;
+}
+
+.MainWrapper {
+    border: 1px solid #ffaeae;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(129, 126, 126, 0.1);
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: clamp(20px, 3vw, 30px);
+    transition: all 0.3s ease;
+}
+
+.TopSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 15px 20px;
+}
+
+.TopLeft {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.TopIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.TopText {
+    font-family: 'CircularXXWeb-Medium', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #363636;
+    margin: 0;
+}
+
+.SubText {
+    font-family: 'CircularXXWeb-Medium', sans-serif;
+    font-size: 16px;
+    color: #040404CC;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.ContentWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.InfoCard {
+    background: #f8f9fa;
+    border: 1px solid #ffaeae;
+    border-radius: 16px;
+    padding: clamp(20px, 3vw, 30px);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 0 auto;
+}
+
+.InfoCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.CardTitle {
+    font-family: 'CircularXXWeb-Medium', sans-serif;
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 15px 0;
+}
+
+.CardDescription {
+    font-family: 'CircularXXWeb-Medium', sans-serif;
+    font-size: 14px;
+    color: #404040BF;
+    margin: 0 0 25px 0;
+    line-height: 1.5;
+}
+
+.SignButton,
+.RetryButton {
+    background-image: linear-gradient(45deg, #f73439, #f8777b);
+    font-family: 'CircularXXWeb-Medium', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(247, 52, 57, 0.2);
+    width: 100%;
+    max-width: 300px;
+}
+
+.SignButton:hover,
+.RetryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 52, 57, 0.3);
+    background-image: linear-gradient(45deg, #f8777b, #f73439);
+}
+
+.SignButton:active,
+.RetryButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(247, 52, 57, 0.2);
+}
+
+.LoaderModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.LoaderContent {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.LoaderSpinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #f73439;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.LoaderText {
+    font-family: 'CircularXXWeb-Medium', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.errorToast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #f73439;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-in 2.7s;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.StepsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.StepCard {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    transition: all 0.3s ease;
+    flex: 1; /* Changed from width: 100% to flex: 1 */
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+.StepCard.active {
+    border-color: #f73439;
+    box-shadow: 0 4px 12px rgba(247, 52, 57, 0.1);
+}
+
+.StepCard.completed {
+    border-color: #28a745;
+    background-color: #f8fff9;
+}
+
+.StepHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.StepTitle {
+    font-family: 'CircularXXWeb-Medium', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.StepStatus {
+    font-family: 'CircularXXWeb-Medium', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.StepStatus.pending {
+    background-color: #fff5f5;
+    color: #f73439;
+}
+
+.StepStatus.completed {
+    background-color: #e6fffa;
+    color: #28a745;
+}
+
+.StepActions {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.DownloadButton {
+    background-color: #fff;
+    border: 1px solid #333;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'CircularXXWeb-Medium', sans-serif;
+}
+
+.DownloadButton:hover {
+    background-color: #f5f5f5;
+}
+
+.EditButton {
+    background-color: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.LayoutContainer {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* .LeftPanel and .RightPanel are no longer used but kept for reference or removed */
+.LeftPanel {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    display: none; /* Hidden as we moved to direct grid/flex layout */
+}
+
+.RightPanel {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    display: none; /* Hidden */
+}
+
+.ProgressBar {
+    display: flex;
+    align-items: flex-start; /* Changed from center to allow top alignment for line */
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    max-width: 500px; /* Increased width for better spacing */
+    margin: 0 auto 30px;
+    width: 100%;
+}
+
+.ProgressBar::before {
+    content: '';
+    position: absolute;
+    top: 16px; /* Aligns with the center of the 32px circle */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.StepIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+.StepCircle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #666;
+    transition: all 0.3s;
+}
+
+.StepCircle.active {
+    border-color: #f73439;
+    color: #f73439;
+    background-color: #fff5f5;
+}
+
+.StepCircle.completed {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.StepLabel {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.StepLabel.active {
+    color: #f73439;
+}
+
+.StepLabel.completed {
+    color: #28a745;
+}
+
+.SebiText {
+    background-color: #fff8e1;
+    border: 1px solid #ffe58f;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #856404;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.DdpiContainer {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px; /* Changed from margin-top to margin-bottom */
+}
+
+.DdpiCheckboxLabel {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.DdpiCheckbox {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    accent-color: #f73439;
+    cursor: pointer;
+}
+
+.DdpiCheckboxLabelDisabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.DdpiCheckboxLabelDisabled .DdpiCheckbox {
+    cursor: not-allowed;
+}

@@ -1,0 +1,397 @@
+.MainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: clamp(20px, 5vw, 50px);
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #fff5f5, #fff);
+}
+
+.MainWrapper {
+    border: 1px solid #ffaeae;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(129, 126, 126, 0.1);
+    width: 90%;
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.topPhotoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 12px;
+}
+
+.topPhotoContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.topCameraText {
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 500;
+    line-height: 1.4;
+    color: #363636;
+    margin: 0;
+}
+.shieldHeading{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #636262;
+}
+
+.topClockDiv {
+    display: flex;
+    gap: 5px;
+    margin-top: 7px;
+}
+
+.clockIcon {
+    height: 20px;
+    width: 20px;
+    align-self: center;
+}
+
+.clockText {
+    font-size: 14px;
+    color: #817E7E;
+}
+
+.shieldDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.shieldText {
+    font-size: 12px;
+    align-items: center ;
+}
+
+.imageDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 15px;
+}
+.ImageContainer{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+}
+.Image1 {
+    height: clamp(150px, 30vw, 200px);
+    width: auto;
+    object-fit: contain;
+}
+.Image {
+    height: clamp(150px, 30vw, 200px);
+    width: auto;
+    object-fit: contain;
+    margin-left: 0;
+}
+.logo{
+    height: 20px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    transform: translate(25% ,25%);
+}
+.Ins{
+    margin-left: 10px;
+    align-self: center;
+}
+.Ins1{
+    align-self: center;
+}
+.Incorrect{
+    color: #e38080;
+    text-align: center;
+    margin-top: 10px;
+}
+.Correct{
+    color:#69af2e;
+    text-align: center;
+    margin-top: 10px;
+}
+.kycInfo {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.Parra1, .Parra {
+    text-align: center;
+    color: #817E7E;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 8px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Info {
+    color: #817E7E;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.InfoImg {
+    margin-right: 12px;
+    display: inline-flex;
+    align-items: center;
+}
+.Instruction {
+    margin-top: 25px;
+    color: #817E7E;
+    font-weight: 600;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.Line {
+    border-bottom: 1px solid #e4e4e4;
+    margin-top: 50px;
+}
+
+.verifyButton {
+    background-image: linear-gradient(to top, #f73439, #f8777b) !important;
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    color: #fff;
+    border-radius: 8px !important;
+    border: none;
+    cursor: pointer;
+    padding: 8px 30px;
+    margin: 10px auto;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.verifyButton.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.verifyButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* ─── OR Divider ──────────────────────────────────────────────────────────── */
+.orDivider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 24px 12px;
+}
+.orLine {
+    flex: 1;
+    height: 1px;
+    background: #e4e4e4;
+}
+.orText {
+    font-size: 13px;
+    color: #aaa;
+    white-space: nowrap;
+}
+
+/* ─── Email Button ────────────────────────────────────────────────────────── */
+.emailButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: calc(100% - 48px);
+    margin: 0 24px 20px;
+    padding: 12px 20px;
+    border: 2px solid #f86a6e;
+    background: white;
+    color: #f73439;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+.emailButton:hover:not(:disabled) {
+    background: #fff0f0;
+    transform: translateY(-1px);
+}
+.emailButton.loading,
+.emailButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+.btnSpinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #fcd4d5;
+    border-top-color: #f73439;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ─── Email Sent Confirmation Box ─────────────────────────────────────────── */
+.emailSentBox {
+    margin: 0 24px 20px;
+    padding: 18px 16px;
+    background: #fff8f8;
+    border: 1.5px solid #ffd6d7;
+    border-radius: 12px;
+    text-align: center;
+}
+.emailSentIcon {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+.emailSentTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 6px;
+}
+.emailSentDesc {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+.pollingIndicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #f86a6e;
+    font-weight: 500;
+}
+.pulseDot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f86a6e;
+    animation: pulse 1.4s ease-in-out infinite;
+    flex-shrink: 0;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+}
+.pollCounter {
+    font-weight: 400;
+    color: #aaa;
+}
+
+/* ─── Completion Overlay ──────────────────────────────────────────────────── */
+.completeOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.completeCard {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 32px 32px;
+    max-width: 360px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    animation: slideUp 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.completeRing {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+}
+.completeSvg {
+    width: 100%;
+    height: 100%;
+}
+.completeCircle {
+    stroke-dasharray: 226;
+    stroke-dashoffset: 226;
+    animation: drawCircle 0.7s ease forwards;
+}
+@keyframes drawCircle {
+    to { stroke-dashoffset: 0; }
+}
+.completeTick {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: drawTick 0.4s ease 0.65s forwards;
+}
+@keyframes drawTick {
+    to { stroke-dashoffset: 0; }
+}
+.completeTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin: 0 0 10px;
+}
+.completeSubtitle {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.7;
+    margin: 0 0 20px;
+}
+.completeProgress {
+    height: 4px;
+    border-radius: 2px;
+    background: #ffd6d7;
+    position: relative;
+    overflow: hidden;
+}
+.completeProgress::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #f73439;
+    animation: progressBar 3.5s linear forwards;
+    transform-origin: left;
+}
+@keyframes progressBar {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}

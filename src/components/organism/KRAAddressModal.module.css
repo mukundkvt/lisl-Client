@@ -1,0 +1,134 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  padding: 1rem;
+}
+
+.modalContent {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalTitle {
+  color: #fd5e63;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.addressContainer {
+  margin-bottom: 1.5rem;
+}
+
+.addressField {
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.addressField label {
+  display: block;
+  color: #fd5e63;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.addressField .value {
+  color: #333;
+  font-size: 1rem;
+  padding: 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  min-height: 2.5rem;
+  word-wrap: break-word;
+  border: 1px solid #e0e0e0;
+}
+
+.addressRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.proceedButton {
+    background-image: linear-gradient(to top, #f73439, #f8777b);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 40px;
+    width: 200px;
+    margin: 20px auto;
+    display: block;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.proceedButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(247, 52, 57, 0.25);
+}
+
+@media (max-width: 480px) {
+    .proceedButton {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 24px;
+        font-size: 0.9375rem;
+    }
+}
+@media (max-width: 480px) {
+  .modalContent {
+    padding: 1rem;
+  }
+
+  .modalTitle {
+    font-size: 1.125rem;
+  }
+
+  .addressField label {
+    font-size: 0.8125rem;
+  }
+
+  .addressField .value {
+    font-size: 0.9375rem;
+    padding: 0.625rem;
+  }
+
+  .addressRow {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .proceedButton {
+    padding: 0.75rem;
+    font-size: 0.9375rem;
+  }
+}

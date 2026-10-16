@@ -1,0 +1,89 @@
+.rejectionBanner {
+  background: linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%);
+  border: 1.5px solid #f87171;
+  border-left: 6px solid #dc2626;
+  border-radius: 18px 18px 12px 12px;
+  padding: 1rem 1.25rem;
+  margin: 0 auto 1.25rem auto;
+  max-width: 960px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.08);
+  animation: slideDown 0.3s ease;
+  font-family: 'CircularXXWeb-Book', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fee2e2;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentWrapper {
+  flex: 1;
+}
+
+.bannerTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #991b1b;
+  margin: 0 0 0.35rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusTag {
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.reasonBox {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  margin: 0.5rem 0;
+  font-size: 0.92rem;
+  color: #7f1d1d;
+  line-height: 1.45;
+}
+
+.reasonLabel {
+  font-weight: 700;
+  margin-right: 0.35rem;
+  color: #991b1b;
+}
+
+.guidanceText {
+  font-size: 0.82rem;
+  color: #b91c1c;
+  margin: 0.35rem 0 0 0;
+  font-style: italic;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

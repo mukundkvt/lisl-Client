@@ -1,0 +1,398 @@
+.tableContainer {
+    margin: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    margin: 20px 0;
+    background: white;
+}
+
+.table th {
+    background: #fd5e63;
+    color: white;
+    font-weight: 500;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+}
+
+.table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #404040;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover td {
+    background-color: #fff5f5;
+}
+
+/* Checkbox styling */
+.table input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    accent-color: #f7595f;
+}
+
+/* Customer Classification */
+.radioGroup {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.radioLabel input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #fd5e63;
+}
+
+/* Tariff Sheet Link */
+.tariffLink {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
+    background: #fff5f5;
+    color: #fd5e63;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: 1px solid #ffd1d3;
+}
+
+.tariffLink:hover {
+    background: #ffd1d3;
+    transform: translateY(-1px);
+}
+
+/* Financial Proof Section */
+.customDropdown {
+    width: 300px;
+    padding: 8px 35px 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #404040;
+    background-color: white;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23404040' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.customDropdown:focus {
+    outline: none;
+    border-color: #fd5e63;
+}
+
+.proofRow {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.proofRow .fileInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #404040;
+}
+
+.proofRow .fileInfo .fileName {
+    color: #fd5e63;
+    font-weight: 500;
+}
+
+.errorMessage {
+    color: #fd5e63;
+    font-size: 14px;
+    margin: 8px 0;
+    padding: 8px 12px;
+    background: #fff5f5;
+    border-radius: 4px;
+    border-left: 3px solid #fd5e63;
+    display: block;
+    width: 100%;
+}
+
+.uploadButtonGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.uploadButton, .removeButton, .addButton {
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+.uploadButton, .addButton {
+    background: #fd5e63;
+    color: white;
+}
+
+.uploadButton:hover, .addButton:hover {
+    background: #f7595f;
+}
+
+.removeButton {
+    background: #f0f0f0;
+    color: #666;
+}
+
+.removeButton:hover {
+    background: #e0e0f0;
+}
+
+.proofNote {
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #fff5f5;
+    border-radius: 4px;
+    border-left: 3px solid #fd5e63;
+}
+
+/* Proceed Button */
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.proceedButton {
+    padding: 12px 40px;
+    background: #fd5e63;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.proceedButton:hover {
+    background: #f7595f;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(253, 94, 99, 0.2);
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #fd5e63;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.errorContainer {
+    text-align: center;
+    padding: 20px;
+    background: #fff5f5;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.errorMessage {
+    color: #fd5e63;
+    margin: 8px 0;
+    padding: 8px 12px;
+    background: #fff5f5;
+    border-radius: 4px;
+    border-left: 3px solid #fd5e63;
+    display: block;
+    width: 100%;
+}
+
+.retryButton {
+    background: #fd5e63;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.retryButton:hover {
+    background: #f7595f;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tableContainer {
+        margin: 10px;
+        
+    }
+
+    .tableWrapper{
+        overflow-x: auto;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin-top: -20px;
+    }
+
+    .table {
+        min-width: 600px;
+        
+    }
+
+    .proofRow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .uploadButtonGroup {
+        margin-top: 10px;
+    }
+
+    .customDropdown {
+        width: 100%;
+    }
+
+    .radioGroup {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .radioGroup {
+        gap: 20px;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .radioLabel {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        color: #404040;
+    }
+}
+
+
+/* Form Validation */
+.invalidField {
+    border-color: #fd5e63;
+    background-color: #fff5f5;
+}
+
+.validationMessage {
+    color: #fd5e63;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Customer Classification Radio Buttons */
+.radioGroup input[type="radio"]:checked + span {
+    color: #fd5e63;
+    font-weight: 500;
+}
+
+/* Financial Proof Section */
+.proofSection {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.proofHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.requiredField {
+    color: #fd5e63;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Financial Proof Warning */
+.financialWarning {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff5f5;
+    border-radius: 8px;
+    border-left: 4px solid #fd5e63;
+    color: #fd5e63;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.uploadButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    background: #fd5e63;
+    color: white;
+}
+
+.syncIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}

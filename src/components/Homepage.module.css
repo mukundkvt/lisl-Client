@@ -1,0 +1,515 @@
+/* ------------------------Parent container & background Blur------------------------- */
+
+.parentContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100dvh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.backgroundBlur{
+    position: absolute;
+    /* overflow: hidden; */
+    width: 100vw;
+    /* height: 100vh; */
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #fdfdfd, #fdfdfd);
+    display: flex;
+    flex-grow: 1;
+    z-index: -1;
+}
+.backgroundBlur div {
+    position: absolute;
+    border-radius: 100%;
+    height: 0;
+    filter: blur(200px);
+    opacity: .4;
+}
+.backgroundBlur div:nth-child(1) {
+    background: linear-gradient(132deg, #FF9A01 0%, #FF9A01 100%);
+    width: 15%;
+    padding-top: 70%;
+    left: 5%;
+    top: 70%;
+    transform: translate(-50%) translateY(-50%);
+}
+.backgroundBlur div:nth-child(2) {
+    background: linear-gradient(132deg, #D75EFD 0%, #D75EFD 100%);
+    width: 17%;
+    padding-top: 68%;
+    left: 100% !important;
+    top: -40% !important;
+    transform: translate(-80%) translateY(20%);
+    rotate: 90deg;
+}
+.backgroundBlur div:nth-child(3) {
+    background: linear-gradient(132deg, #60ECBA 0%, #60ECBA 100%);
+    width: 25%;
+    padding-top: 70%;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%) translateY(20%);
+}
+
+
+
+
+/* -------------------------------Left Container ---------------------------------------- */
+
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: calc(100vh - 100px);
+    max-height: 725px !important;
+}
+
+
+.d_flex{
+    display: flex;
+}
+
+.lighting_strike{
+    width: 30px;
+    height: 60px;
+    margin-right: 8px;
+}
+
+.LightningText {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    line-height: 20px;
+    color: #817E7E;
+}
+
+.TradingNInvesting {
+    font-size: 24px;
+    color: #4f4f4f;
+    font-weight: bolder;
+    line-height: 20px;
+    margin-top: 0;
+    
+}
+
+.StocksText {
+    color: #f05156;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fadeOut {
+    opacity: 0;
+    transform: translateY(0);
+}
+
+.fadeIn {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.animate {
+    animation: fadeOut 0.5s ease-in-out forwards, fadeIn 0.5s ease-in-out forwards 0.5s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------------------Right Container----------------------------- */
+.rightContainer {
+    width: 450px;
+    height: calc(100vh - 100px);
+    max-height: 646px !important;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 3px #817e7e1a;
+    background-color: #fff !important;
+    min-height: 550px;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+}
+
+.applicationContainer{
+    display: flex;
+    gap:15px;
+    margin-top: 30px;
+}
+
+.newUser, .existingUser{
+    background-color: #f8767a44;
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+}
+.newUser:hover, .existingUser:hover{
+    box-shadow: 0 5px 20px #d2d2d2fa;
+}
+
+.selectedUser{
+    background-color: #f8767a;
+color: #fff;
+padding: 5px 10px;
+border-radius: 24px;
+cursor: pointer;
+transition: all 0.5s ease-in-out;
+}
+
+.registerContent::before{
+    position: absolute;
+    content: url(../assets/icons/leftLoginImage.svg);
+    left: -300px;
+    top: 0;
+    z-index: -1;
+}
+.registerContent{
+    margin: 0 55px 5px;
+    position: relative;
+    height: 100%;
+}
+
+.registerContent::after {
+    position: absolute;
+    content: url(../assets/icons/rightLoginImage.svg);
+    right: -250px;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+
+}
+.registerLog{
+    margin-top: 78px;
+    /* height: 30%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightLogo {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.createAccountText {
+    font-family: 'CircularXXWeb', sans-serif;
+    font-weight: 700;
+    color: #4f4f4f;
+    margin-top: 30px; 
+    text-align: center;
+    /* margin-top: -50px; */
+    margin-bottom: 60px;
+}
+
+.emailOTPText{
+    /* text-align: center; */
+    /* max-width: 70%; */
+    word-break: break-all;
+}
+
+.form__input_group {
+    margin: 15px 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__input {
+    width: 100%;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    transition: border 0.25s ease-in-out;
+    height: 50px !important;
+    color: #4f4f4f !important;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+.form__input:focus {
+    border: 1px solid #e4e4e4;
+    outline: none;
+}
+.mobileprefix{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-40%,-50%);
+}
+
+.form__input_label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: all 0.25s ease-in-out;
+    font-size: 14px;
+}
+
+.form__input_label {
+    top: 0;
+    background-color: #ffffff;
+    font-size: 12px;
+    padding: 0 5px;
+    color: #777;
+    font-weight: 400;
+}
+.errorText{
+    font-size: 12px;
+    line-height: 18px;
+    color: #dd6565;
+    margin-left: 5px;
+}
+.checkBoxContainer{
+    font-size: 12px;
+    padding-left: 5px;
+}
+.Button{
+    background-image: linear-gradient(to top, #f73439, #f8777b) !important;
+    margin-top: .8rem !important;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    line-height: 1.13;
+    color: #fff;
+    height: 44px;
+    border-radius: 8px !important;
+    border: none;
+    cursor: pointer;
+}
+
+.Button:disabled {
+    background-image: none !important;
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+@media (max-width: 1150px) {
+    .leftContainer{
+        display: none;
+    }
+
+    .rightContainer {
+        margin: 0 20px;
+    }
+
+}
+@media (max-width: 440px) {
+    .registerContent{
+        margin: 20px;
+    }
+
+}
+
+
+/* ------------------------------Stepper ---------------------------------- */
+.stepperContainer {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: -50px;
+  }
+  
+  .stepperWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .stepperWrapper::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: #e4e4e4;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .stepperItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    z-index: 2;
+  }
+  
+  .stepCounter {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 6px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .stepName {
+    font-size: 14px;
+    color: #817E7E;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .stepperItem.active .stepCounter {
+    border-color: #f05156;
+    color: #f05156;
+  }
+  
+  .stepperItem.active .stepName {
+    color: #f05156;
+  }
+  
+  .stepperItem.completed .stepCounter {
+    background-color: #f05156;
+    border-color: #f05156;
+    color: #fff;
+  }
+  
+  .stepperItem.completed .stepName {
+    color: #4f4f4f;
+  }
+  
+  /* Add a line between steps that updates with progress */
+  .stepperItem.completed::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #f05156;
+    top: 15px;
+    left: 50%;
+    z-index: -1;
+  }
+  
+  /* Adjust the line for the last item */
+  .stepperItem:last-child::after {
+    display: none;
+  }
+
+
+/* ------------------------------- OTP Component-------------------------- */
+.OTPTextContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.OTPTextContainer h4{
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    line-height: 1.13;
+    color: #404040bf;
+}
+
+.OTPIcon{
+    cursor: pointer;
+}
+
+.otpInput {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0.3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    color: #4f4f4f;
+    margin-top: -20px;
+    -moz-appearance: textfield;
+}
+.otpInput::-webkit-outer-spin-button,
+.otpInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.otpInput:focus {
+    border-color: #f05156;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(240, 81, 86, 0.1);
+}
+
+/* .otpInput:hover {
+    border-color: #f05156;
+} */
+
+.resendContainer {
+  margin: 15px 0;
+}
+
+.timerText {
+  color: #4f4f4f;
+  font-size: 14px;
+}
+
+.timerText span {
+  color: #f05156;
+  font-weight: 600;
+}
+
+.resendText {
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.resendText.enabled {
+  color: #f05156;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.resendText.enabled:hover {
+  opacity: 0.8;
+}
+
+.resendText.disabled {
+  color: #817E7E;
+  cursor: not-allowed;
+}
+

@@ -1,0 +1,1268 @@
+.MainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: clamp(20px, 5vw, 50px);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.MainWrapper {
+  border: 1px solid #ffaeae;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 15px 3px #817e7e1a;
+  width: 90%;
+  max-width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.topPANDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 12px;
+}
+
+.topPanText {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #363636;
+  margin-top: 5px;
+}
+
+.topClockDiv {
+  display: flex;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.clockIcon {
+  height: 20px;
+  width: 20px;
+  align-self: center;
+}
+
+.clockText {
+  font-size: 14px;
+  color: #817e7e;
+}
+
+.panDemoDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.EnterYourPan {
+  font-family: "CircularXXWeb-Medium";
+  font-size: 16px;
+  color: #040404cc;
+}
+
+.panInputDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 0 clamp(15px, 5vw, 25%);
+  margin-top: clamp(30px, 5vh, 50px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.shieldDiv {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.shieldText {
+  font-size: 14px;
+  color: #404040bf;
+  margin-left: 5px;
+}
+
+.Line {
+  border-bottom: 1px solid #e4e4e4;
+  margin-top: 50px;
+}
+
+.verifyButton {
+  background-image: linear-gradient(to right, #f73439, #f8777b) !important;
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 500;
+  font-stretch: normal;
+  color: #fff;
+  border-radius: 10px !important;
+  border: none;
+  cursor: pointer;
+  padding: clamp(10px, 1.5vw, 14px) clamp(24px, 3vw, 34px);
+  margin: clamp(15px, 2vh, 20px) auto;
+  width: fit-content;
+  min-width: 140px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(247, 52, 57, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verifyButton:active {
+  box-shadow: 0 3px 10px rgba(247, 52, 57, 0.2);
+}
+
+.verifyButton:disabled {
+  background-image: linear-gradient(to right, #cccccc, #dddddd) !important;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.8;
+}
+
+.verifyButton.loading {
+  pointer-events: none;
+}
+
+.loadingDots {
+  display: inline-flex;
+  margin-left: 8px;
+  align-items: center;
+}
+
+.loadingDots span {
+  width: 4px;
+  height: 4px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: loadingDots 1.4s infinite ease-in-out both;
+}
+
+.loadingDots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loadingDots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loadingDots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loadingDots {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.PaymentDiv {
+  display: flex;
+  width: clamp(85%, 75%, 95%);
+  margin: 0 auto;
+  margin-top: clamp(30px, 5vh, 50px);
+  justify-content: space-between;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: clamp(18px, 2.5vw, 26px);
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #fff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.PaymentDiv:hover {
+  border-color: #f73439;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(247, 52, 57, 0.1);
+  transform: translateY(-2px);
+}
+
+.UPI_Container {
+  display: flex;
+}
+
+@keyframes shine {
+  to {
+    background-position: -100% 0;
+  }
+}
+
+.PaymentMode {
+  width: 100%;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.PaymentHeading {
+  display: flex;
+  font-size: clamp(14px, 2vw, 16px);
+  margin-top: 0.5px;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  color: #2d2d2d;
+  font-weight: 500;
+  text-align: left;
+}
+
+.UPI_Layer {
+  margin-left: 5px;
+  color: #f73439;
+  font-weight: 600;
+  max-height: 25px;
+}
+
+.PaymentDes {
+  font-size: 13px;
+  color: #666;
+  white-space: break-spaces;
+  margin-top: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  width: 250px;
+}
+
+.PaymentDesBank {
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.customCheckbox {
+  display: flex;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-items: flex-start;
+}
+
+.customCheckbox:hover {
+  transform: translateY(-1px);
+}
+
+.customCheckbox input {
+  display: none;
+}
+
+.customCheckbox .checkmark {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #f73439;
+  border-radius: 6px;
+  margin-right: 12px;
+  position: relative;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(247, 52, 57, 0.1);
+}
+
+.customCheckbox:hover .checkmark {
+  box-shadow: 0 4px 8px rgba(247, 52, 57, 0.15);
+}
+
+.customCheckbox input:checked + .checkmark {
+  background-color: #f73439;
+  animation: checkmark-pop 0.3s ease-out;
+}
+
+@keyframes checkmark-pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.customCheckbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  animation: checkmark-check 0.2s ease-in-out 0.1s both;
+}
+
+@keyframes checkmark-check {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: 12px;
+    opacity: 1;
+  }
+}
+
+.bankInput1,
+.bankInput2 {
+  border: none;
+  border-bottom: 2px solid #fa7a70;
+  border-top: none;
+  padding: 10px 8px;
+  font-size: 15px;
+  width: 100%;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  margin-bottom: 15px;
+  outline: none;
+  position: relative;
+  z-index: 10;
+  cursor: text;
+  border-radius: 4px 4px 0 0;
+}
+
+.bankInput1:focus,
+.bankInput2:focus {
+  border-bottom: 2px solid #f73439;
+  box-shadow: 0 4px 6px -4px rgba(247, 52, 57, 0.25);
+}
+
+.bankInput1::placeholder,
+.bankInput2::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.upiBottomSheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1000;
+  padding: 24px;
+  max-height: 85vh;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+}
+
+.upiBottomSheet.show {
+  transform: translateY(0);
+  animation: slideUpAnimation 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideUpAnimation {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.upiBottomSheetOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+  backdrop-filter: blur(3px);
+}
+
+.upiBottomSheetOverlay.show {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeInAnimation 0.3s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bottomSheetHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.bottomSheetTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.closeButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #f5f5f5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 18px;
+  color: #555;
+}
+
+.closeButton:hover {
+  background: #ebebeb;
+  transform: rotate(90deg);
+}
+
+.closeButton:active {
+  transform: scale(0.92) rotate(90deg);
+  background: #e0e0e0;
+}
+
+.timerSection {
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 12px 0;
+}
+
+.timerCircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #f73439;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #f73439;
+  margin: 0 auto 16px;
+  animation: pulse 1.5s ease-in-out infinite;
+  box-shadow: 0 6px 20px rgba(247, 52, 57, 0.15);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.timerText {
+  color: #555;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timer {
+  margin: 24px 0;
+  position: relative;
+}
+
+.timerPopup {
+  max-width: 360px;
+}
+
+.upiAppsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+  padding: 0 4px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.upiBottomSheet.show .upiAppIcon {
+  animation: fadeInUp 0.25s ease forwards;
+  animation-delay: calc(0.04s * var(--icon-index, 0));
+  opacity: 0;
+}
+
+.upiAppIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 5px;
+  border-radius: 6px;
+  margin: 3px;
+  height: 50px;
+}
+
+.upiAppIcon:active {
+  background-color: rgba(247, 52, 57, 0.05);
+  transform: scale(0.95);
+}
+
+.upiAppIcon img {
+  width: 24px;
+  height: 24px;
+  padding: 3px;
+  border-radius: 6px;
+  background: #f8f8f8;
+  transition: all 0.2s ease;
+  object-fit: contain;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.upiAppIcon:hover {
+  transform: translateY(-2px);
+}
+
+.upiAppIcon:hover img {
+  background: #f0f0f0;
+}
+
+.upiAppLabel {
+  font-size: 11px;
+  color: #555;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(247, 52, 57, 0.4);
+  }
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 8px rgba(247, 52, 57, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(247, 52, 57, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .popupContentDesktop {
+    display: none;
+  }
+
+  .popupContentMobile {
+    display: block;
+    padding: 15px 10px;
+  }
+
+  .timerCircle {
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+    border-width: 2px;
+    margin-bottom: 12px;
+  }
+
+  .upiBottomSheet {
+    padding: 20px 16px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .bottomSheetHeader {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+
+  .bottomSheetTitle {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .closeButton {
+    width: 28px;
+    height: 28px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .upiAppsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .upiAppIcon {
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+  }
+
+  .upiAppLabel {
+    font-size: 12px;
+    letter-spacing: 0.1px;
+    margin-top: 6px;
+  }
+
+  .timerSection {
+    margin-bottom: 15px;
+    padding: 10px 0;
+  }
+
+  .timerText {
+    font-size: 13px;
+    max-width: 90%;
+  }
+
+  .upiAppButtons {
+    gap: 14px;
+    margin: 16px 0;
+  }
+
+  .popup {
+    padding: 20px 16px;
+    max-width: 340px;
+  }
+
+  .popupContent h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .popupContent h4 {
+    font-size: 16px;
+    margin: 12px 0;
+  }
+
+  .popupContent p {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .popupContent button {
+    padding: 9px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) {
+  .popupContentMobile {
+    display: none;
+  }
+
+  .popupContentDesktop {
+    display: block;
+  }
+}
+
+.BankLabel1,
+.BankLabel2 {
+  color: rgb(0 0 0 / 87%);
+  font-size: clamp(10px, 1.2vw, 12px);
+  margin-bottom: clamp(5px, 1vh, 7px);
+  position: relative;
+  z-index: 5;
+}
+
+.BankLabel1 {
+  margin-top: clamp(30px, 5vh, 50px);
+}
+.Bankifsc {
+  margin-top: 10%;
+}
+
+.errorText {
+  color: #f73439;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  background-color: rgba(247, 52, 57, 0.05);
+  padding: 6px 8px;
+  border-radius: 4px;
+  position: relative;
+  z-index: 10;
+}
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: white;
+  padding: clamp(20px, 3vw, 28px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 420px;
+  width: 95%;
+  margin: 10px;
+  box-sizing: border-box;
+  animation: popupFadeIn 0.3s ease-out;
+  transform-origin: center;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popupContent {
+  text-align: center;
+}
+
+.popupContent h3 {
+  color: #333;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.popupContent h4 {
+  color: #f73439;
+  margin: 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.popupContent p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.popupContent button {
+  background-image: linear-gradient(to right, #f73439, #f8777b);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(247, 52, 57, 0.2);
+  margin-top: 8px;
+}
+
+.popupContent button:hover {
+  background-image: linear-gradient(to right, #e62d32, #f66b6f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(247, 52, 57, 0.25);
+}
+
+.popupContent button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(247, 52, 57, 0.2);
+}
+
+.upiImgPopupWrapper {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.upiImgPopup {
+  height: 32px;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.upiImgPopup:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+}
+
+.upiAppButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.upiAppIcon {
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.upiAppIcon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+}
+
+.popupContentDesktop {
+  text-align: center;
+  padding: 5px;
+}
+
+.popupContentDesktop img[alt="UPI_QR"] {
+  max-width: 200px;
+  height: auto;
+  margin: 15px auto;
+  border-radius: 12px;
+  padding: 12px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.popupContentDesktop img[alt="UPI_QR"]:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.popupContentMobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .MainWrapper {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .PaymentDiv {
+    width: 90%;
+    padding: 12px;
+  }
+
+  .PaymentMode {
+    width: 100%;
+  }
+
+  .PaymentDes {
+    font-size: 11px;
+  }
+
+  .topPanText {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  .clockText {
+    font-size: 12px;
+  }
+
+  .popupContentDesktop {
+    display: none;
+  }
+
+  .popupContentMobile {
+    display: block;
+    padding: 10px;
+  }
+
+  .upiImgPopup {
+    height: 25px;
+  }
+
+  .popup {
+    margin: 5px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .MainContainer {
+    padding: 10px;
+  }
+
+  .MainWrapper {
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  .PaymentDiv {
+    width: 95%;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .shieldDiv {
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+
+  .shieldText {
+    font-size: 12px;
+  }
+
+  .Line {
+    margin-top: 30px;
+  }
+}
+/* Popup container */
+.popupContent {
+  padding: 22px 24px 24px;
+}
+
+/* Title */
+.popupTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px; /* was 8 */
+  color: #111;
+}
+
+/* Subtitle */
+.popupSubText {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 18px; /* was 16 */
+  line-height: 1.45;
+}
+
+/* Document box */
+.documentBox {
+  background: #f6f7f9;
+  border-radius: 8px;
+  padding: 12px 14px; /* tighter */
+  margin-bottom: 20px; /* more separation */
+}
+
+.documentTitle {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px; /* tighter */
+}
+
+.documentBox ul {
+  margin: 0;
+  padding-left: 16px; /* tighter indent */
+  font-size: 13px;
+  color: #444;
+}
+
+.documentBox li {
+  margin-bottom: 4px;
+}
+
+/* Upload field */
+.uploadField {
+  margin-bottom: 22px; /* more breathing */
+}
+
+.uploadLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.fileInput {
+  width: 100%;
+  font-size: 13px;
+  padding: 6px 2px;
+}
+
+.uploadHint {
+  font-size: 12px;
+  color: #777;
+  margin-top: 6px;
+}
+
+/* Buttons */
+.popupPrimaryBtn {
+  width: 100%;
+  height: 44px;
+  margin-top: 4px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.popupSecondaryBtn {
+  background: transparent !important;
+  background-image: none !important;
+
+  border: 1px solid #f85e63 !important;
+  box-shadow: none !important;
+
+  color: #666 !important;
+  font-size: 13px !important;
+
+  width: 100%;
+  margin-top: 14px;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.fileInput {
+  width: 100%;
+  font-size: 13px;
+}
+
+.uploadHint {
+  font-size: 12px !important;
+  color: #777;
+  margin-top: 4px;
+}
+
+.uploadField {
+  margin-bottom: 20px;
+}
+
+.uploadLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.uploadBox {
+  position: relative;
+  border: 2px dashed #cfd4dc;
+  border-radius: 12px;
+  padding: 28px 16px;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.uploadBox:hover {
+  border-color: #8b5cf6; /* subtle fintech accent */
+  background: #faf9ff;
+}
+
+.uploadIcon {
+  color: #9aa1ad;
+  margin-bottom: 0px !important;
+}
+
+.uploadText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0px !important;
+}
+
+.uploadHint {
+  font-size: 12px;
+  color: #777;
+}
+
+.fileInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.popup {
+  position: relative;
+}
+
+.attachedProofContainer {
+  margin-top: 15px;
+  padding: 14px 16px;
+  background-color: #fcfdfe;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.attachedProofHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attachedProofTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.attachedProofIcon {
+  color: #f73439;
+}
+
+.attachedProofBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.attachedProofBadgeVerified {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.attachedProofBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.attachedProofName {
+  font-size: 13px;
+  color: #475569;
+  word-break: break-all;
+  max-width: 60%;
+}
+
+.attachedProofActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.viewDocLink {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.viewDocLink:hover {
+  color: #1d4ed8;
+}
+
+.changeDocBtn {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.changeDocBtn:hover {
+  background-color: #e2e8f0;
+}
+
+.bankInfoCard {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background-color: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bankInfoItem {
+  font-size: 13px;
+  color: #334155;
+}
+
+.bankInfoLabel {
+  font-weight: 600;
+  color: #64748b;
+  margin-right: 6px;
+}
+
+.bankInfoValue {
+  font-weight: 500;
+  color: #1e293b;
+}
